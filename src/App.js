@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from 'react-router-dom';
+
+import Header from './components/common/header/Header';
+import LoginView from './pages/LoginView';
+import ProcessView from './pages/ProcessView';
+import EndProcessView from './pages/EndProcessView';
+
+import UserContext from './providers/UserContext';
 
 function App() {
+  const [user, setUser] = useState(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserContext.Provider value={{ user, setUser }}>
+      <div>
+        <BrowserRouter>
+          <Header />
+          <Routes>            
+            <Route path="/" element={<LoginView />} />
+            <Route path="cotizar/*" element={<ProcessView />} />
+            <Route path="/finalizar" element={<EndProcessView />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </UserContext.Provider>
   );
 }
 

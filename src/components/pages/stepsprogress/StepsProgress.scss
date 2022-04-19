@@ -1,0 +1,13 @@
+@import '../../../styles/variables';
+
+.stepsprogress-container {
+    border-bottom: 1px solid $Gray_6;
+
+    &__label--margin {
+        margin: 0 1rem 0 3rem;
+    }
+
+    &__bar {
+        width: 50%;
+    }
+}

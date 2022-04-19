@@ -1,0 +1,29 @@
+@import '../../../styles/variables';
+
+.form {
+  padding: 2rem;
+
+  &__title {
+    &--color {
+      color: $Gray_1_Titles;
+    }
+  }
+
+  .form-check-label {
+    a {
+      color: $Gray_2_Paragraph;
+      font-weight: bold;
+    }
+
+    &--color {
+      color: $Gray_2_Paragraph;
+    };
+  }
+}
+
+.login__form--width {
+  max-width: 400px;
+  @media (min-width: 992px) {
+    padding: 0 0 0 3.4rem;
+  }
+}

@@ -1,0 +1,21 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.icon-circle {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+    vertical-align: middle;
+
+    &--disabled {
+        @include theme-icon();
+    }
+
+    &--primary-outline {
+        @include theme-icon($theme: transparent, $color: $Red_3, $border_color: $Red_1_Rimac)
+    }
+
+    &--secundary {
+        @include theme-icon($theme: $Acian_2_Hover, $color: $white, $border_color: $Acian_2_Hover);
+    }
+};

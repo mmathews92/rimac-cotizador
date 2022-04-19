@@ -1,0 +1,53 @@
+@import './variables';
+
+.thanks-view {
+
+    &__message-container {
+        padding: 2rem;
+    }
+
+    &__figure {
+        img {
+            width: 100%;
+        }
+    }
+
+
+    &__text {
+        line-height: 28px;
+    }
+
+    &__button {
+        width: 100%;
+    }
+
+    @media (min-width: 992px) {
+        &__title {
+            width: 70%;
+        }
+
+        &__message-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        &__figure {
+            background-color: $Gray_7;
+
+            img {
+                max-width: 416px;
+                position: relative;
+                top: 25%;
+                left: 35%;
+            }
+        }
+
+        &__button {
+            width: initial;
+            max-width: initial;
+        }
+    }
+}

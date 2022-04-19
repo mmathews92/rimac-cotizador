@@ -1,0 +1,5 @@
+@mixin theme-icon($theme: transparent, $color: $Gray_4, $border_color: $Gray_4) {
+    background: $theme;
+    border: 1px solid $border_color;
+    color: $color;
+}

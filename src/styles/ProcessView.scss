@@ -1,0 +1,7 @@
+.view {
+    @media (min-width: 992px) {
+        &--position {
+            top: 56 / 810 * 100vh;
+        }
+    }
+}

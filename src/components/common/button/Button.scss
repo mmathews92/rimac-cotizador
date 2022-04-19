@@ -1,0 +1,43 @@
+@import '../../../styles/variables';
+
+// Shade a color: mix a color with black
+@function shade-color($color, $weight) {
+  @return mix(black, $color, $weight);
+}
+
+.button {
+  font-size: 16px;
+  font-family: $font_text;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  min-width: 192px;
+  padding: 1.2rem 2rem;
+
+  &--small {
+    min-width: auto;
+  }
+
+  &--primary {
+    color: $white;
+    background-color: $Red_1_Rimac;
+  
+    &:hover {
+      color: shade-color($white, 10%);
+      background-color: shade-color($Red_1_Rimac, 10%);
+    }
+  }
+
+  &--outline-light {
+    border: 1px solid $Gray_4;
+    color: $Acian_2_Hover;
+
+    &:hover {
+      color: shade-color($Acian_2_Hover, 10%);
+    }
+  }
+
+  @media (min-width: 992px) {
+    max-width: 200px;
+  }
+}
+

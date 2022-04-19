@@ -1,0 +1,27 @@
+@import '../../../styles/variables';
+
+.tabs-categories {
+    &__text {
+        font-size: 0.8rem;
+        font-weight: 700;
+    }
+
+    &__tab {
+        border-bottom: $Gray_4;
+
+        &:hover {
+            color: $Red_3;
+        }
+    }
+
+    &__tab--disabled {
+        color: $Gray_1_Titles;
+        border: none;
+    }
+
+    &__tab--active {
+        color: $Red_1_Rimac;
+        border-bottom: 1px solid red !important;
+        border-radius: 0 !important;
+    }
+}

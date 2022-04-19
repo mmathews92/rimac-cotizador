@@ -1,0 +1,40 @@
+@import '../../../styles/variables';
+
+.price-range {
+    &__label {
+        font-size: 0.8rem;
+    }
+
+    &--background {
+        background-color: transparent !important;
+    }
+
+    @media (min-width: 992px) {
+        max-width: 200px;
+
+        &__button {
+            padding: 1.2rem;
+        }
+    }
+}
+
+.cardata {
+
+    &__button--back {
+        padding: 0 2rem;
+    }
+
+    &__form {
+        &--width {
+            max-width: 500px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        padding: 3rem;
+
+        &__radio--margin {
+            margin: 1.5rem 0;
+        }
+    }
+}

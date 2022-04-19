@@ -1,0 +1,19 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.sidebar {
+    background-color: $Gray_7;
+    padding: 2.75rem;
+
+    &__link {
+        color: $Gray_3;
+
+        &--active {
+            color: $Gray_1_Titles;
+        }
+
+        &:hover {
+            color: inherit;
+        }
+    }
+}

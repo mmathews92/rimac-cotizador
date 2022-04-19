@@ -1,0 +1,9 @@
+@import '../../../styles/variables';
+
+.go-back-link {
+    font-size: 0.8rem;
+
+    &__text {
+        color: $Gray_3;
+    }
+}

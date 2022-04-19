@@ -1,0 +1,39 @@
+@import './variables';
+
+.banner {
+    background-color: $Gray_7;
+    padding-top: 5.4rem;
+    padding-bottom: 3.4rem;
+    min-height: 308 / 810 * 100vh;
+
+    &__image-mobile {
+        position: absolute;
+        right: 0;
+        top: 30%;
+    }
+
+    &__content {
+        width: 70%;
+    }
+
+    @media (min-width: 992px) {
+        background-image: url('../assets/banner-background.png');
+        background-color: #ECF0FF;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 0;
+        height: 100vh;
+
+        &__content {
+            width: 100%;
+
+            &--padding {
+                padding-left: 3.5rem;
+            }
+        }
+
+        &__image-dektop {
+            width: 100%;
+        }
+    }
+}
